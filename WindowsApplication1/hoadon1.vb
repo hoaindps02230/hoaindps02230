@@ -22,17 +22,17 @@ Public Class hoadon1
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         KetNoi.Open()
         Dim them As String = "insert into HoaDon Values(@MaHD,@KhachHang_MaKH,@NhanVien_MaNV,@SanPham_MaSP,@SoLuong,@DonGia,@NgayLapHoaDon,@TongTien)"
-        Dim cmd As SqlCommand = New SqlCommand(them, KetNoi)
+        Dim cmd1 As SqlCommand = New SqlCommand(them, KetNoi)
         Try
-            cmd.Parameters.AddWithValue("@MaHD", TextBox1.Text)
-            cmd.Parameters.AddWithValue("@KhachHang_MaKH", TextBox2.Text)
-            cmd.Parameters.AddWithValue("@NhanVien_MaNV", TextBox3.Text)
-            cmd.Parameters.AddWithValue("@SanPham_MaSP", TextBox4.Text)
-            cmd.Parameters.AddWithValue("@SoLuong", TextBox5.Text)
-            cmd.Parameters.AddWithValue("@DonGia", TextBox6.Text)
-            cmd.Parameters.AddWithValue("@NgayLapHoaDon", TextBox8.Text)
-            cmd.Parameters.AddWithValue("@TongTien", TextBox7.Text)
-            cmd.ExecuteNonQuery()
+            cmd1.Parameters.AddWithValue("@MaHD", TextBox1.Text)
+            cmd1.Parameters.AddWithValue("@KhachHang_MaKH", TextBox2.Text)
+            cmd1.Parameters.AddWithValue("@NhanVien_MaNV", TextBox3.Text)
+            cmd1.Parameters.AddWithValue("@SanPham_MaSP", TextBox4.Text)
+            cmd1.Parameters.AddWithValue("@SoLuong", TextBox5.Text)
+            cmd1.Parameters.AddWithValue("@DonGia", TextBox6.Text)
+            cmd1.Parameters.AddWithValue("@NgayLapHoaDon", TextBox8.Text)
+            cmd1.Parameters.AddWithValue("@TongTien", TextBox7.Text)
+            cmd1.ExecuteNonQuery()
             KetNoi.Close()
             MessageBox.Show("Thêm thành công hóa đơn có mã " & TextBox1.Text & "")
         Catch ex As Exception
